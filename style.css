@@ -1,0 +1,549 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.alert{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.95;
+  display: none;
+  z-index: 3;
+  text-align: center;
+  --font-size: 32px;
+  top:0;
+}
+
+.alert_desc{
+  position: relative;
+  color: white;
+  width: 100%;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size);
+  padding-bottom: 2%;
+}
+
+.alert_button{
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size);
+}
+
+@font-face {
+  font-family: weddingFont;
+  src: url("https://dl.dropbox.com/s/iqv3xrtvkzcpico/FREEBSC_.ttf");
+}
+
+@font-face {
+  font-family: headerFont;
+  src: url("https://dl.dropbox.com/s/5aq014x9pwa6pxq/Elsie-Regular.ttf");
+}
+
+@font-face {
+  font-family: brittanyFont;
+  src: url("https://dl.dropbox.com/s/r76y650gsnyddmf/BrittanySignature.ttf");
+}
+
+@font-face {
+  font-family: AbhayaLibreFont;
+  src: url("https://dl.dropbox.com/s/wtvl4qvyeqzdu4d/AbhayaLibre-Regular.ttf");
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 50px;
+}
+
+/*.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}*/
+.rotate_to_back{
+  animation: rotate_to_back_anim 0.8s linear forwards;
+  -webkit-animation: rotate_to_back_anim 0.8s linear forwards;
+}
+
+@keyframes rotate_to_back_anim{
+	0%{
+		transform: rotateY(0deg) scale(1);
+	}
+	33%{
+		transform: rotateY(60deg) scale(0.85);
+	}
+	66%{
+		transform: rotateY(120deg) scale(0.85);
+	}
+	100%{
+		transform: rotateY(180deg) scale(1);
+	}
+}
+
+.rotate_to_front{
+  animation: rotate_to_front_anim 0.8s linear forwards;
+  -webkit-animation: rotate_to_front_anim 0.8s linear forwards;
+}
+
+@keyframes rotate_to_front_anim{
+	0%{
+		transform: rotateY(180deg) scale(1);
+	}
+	33%{
+		transform: rotateY(120deg) scale(0.85);
+	}
+	66%{
+		transform: rotateY(60deg) scale(0.85);
+	}
+	100%{
+		transform: rotateY(0deg) scale(1);
+	}
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.card_front_image{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	object-fit: cover;
+	object-position: top;
+	opacity: 0.3;
+	left: 0;
+}
+
+.card_front_sub_content{
+	position: absolute;
+	background-color: rgba(255,255,255,0);
+	color: black;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.border1{
+  position: absolute;
+  left:2.5%;
+  width: 95%;
+  height: 100%;
+  box-shadow: 0px 0px 20px #ffe9ca;
+  background-color: transparent;
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+}
+
+.border2{
+  position: absolute;
+  left:5%;
+  width: 90%;
+  height: 100%;
+  box-shadow: 0px 0px 20px #ffe9ca;
+  background-color: transparent;
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+}
+
+.border3{
+  position: absolute;
+  left:7.5%;
+  width: 85%;
+  height: 100%;
+  box-shadow: 0px 0px 20px #ffe9ca;
+  background-color: transparent;
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+}
+
+.card_front_sub_content_bound{
+	position: relative;
+	top:50%;
+	transform: translate(0,-50%);
+	--small_font:15px;
+	--middle_font:20px;
+	--big_font:50px;
+	--small_padding:5%;
+	--middle_padding:8%;
+	--big_padding:10%;
+  font-family: AbhayaLibreFont;
+}
+
+.card_front_sub_content_1{
+	position: relative;
+	font-size: var(--middle_font);
+  padding-bottom: var(--middle_padding);
+}
+
+.card_front_sub_content_2{
+	position: relative;
+	font-size: var(--small_font);
+	font-family: headerFont;
+  display: inline-block
+  padding-bottom: var(--middle_padding);
+}
+
+.card_front_sub_content_3{
+	padding-top: var(--small_padding);
+	position: relative;
+	font-size: calc(var(--big_font)*1);
+  font-family: weddingFont;
+}
+
+.card_front_sub_content_4{
+	position: relative;
+	font-size: var(--middle_font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_front_sub_content_5{
+  padding-top: var(--small_padding);
+  position: relative;
+  font-size: calc(var(--big_font)*1);
+  font-family: weddingFont;
+}
+
+.card_front_sub_content_6{
+	position: relative;
+	font-size: var(--small_font);
+  padding-top: var(--middle_padding);
+}
+.card_front_sub_content_6p5{
+  position: relative;
+  font-size: var(--small_font);
+  padding-top: var(--middle_padding);
+  font-family: headerFont;
+  font-weight: bold;
+}
+.card_front_sub_content_7{
+	padding-top: calc(var(--big_padding));
+	position: relative;
+	font-size: var(--middle_font);
+}
+.card_front_sub_content_8{
+	position: relative;
+	font-size: var(--small_font);
+}
+.card_front_sub_content_9{
+	position: relative;
+	font-size: calc(var(--middle_font));
+}
+.card_front_sub_content_10{
+	position: relative;
+	font-size: var(--small_font);
+}
+
+.card_front_sub_content_11{
+	margin-top: var(--big_padding);
+	position: relative;
+	font-size: var(--middle_font);
+	font-family: headerFont;
+	font-weight: bold;
+	animation: RSVP_ANIM 3s linear infinite;
+  	-webkit-animation: RSVP_ANIM 3s linear infinite;
+}
+
+@keyframes RSVP_ANIM{
+	0%{
+		color: #493500;
+	}
+	33%{
+		color: #49001E;
+	}
+	66%{
+		color: #300049;
+	}
+	100%{
+		color: #493500;
+	}
+}
+
+.flip-card-back {
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card_back_image{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	object-fit: cover;
+	object-position: top;
+	opacity: 0.3;
+	left: 0;
+}
+
+/*START OF CONTENT PRINT*/
+.Segment15{
+  position: relative;
+}
+
+#contentToPrint{
+  position: relative;
+  font-size: 32px;
+  font-family: Serif;
+  width: 882px;
+  /*height: 553px;*/
+  height: 1100px;
+  display: none;
+  margin-bottom: 296px;
+  text-align: center;
+}
+
+.ticket{
+  position: absolute;
+  width:100%;
+  height:100%;
+  padding-left: 11%;
+}
+
+.ticket_name{
+  position: absolute;
+  /*font-size: 15px;*/
+  font-size: 20px;
+  width: 170px;
+  top: 880px;
+  left: 395px;
+}
+
+.seat_QR{
+  position: absolute;
+  font-size: 15px;
+  width: 70px;
+  top: 960px;
+  left: 435px;
+}
+
+
+
+
+/*START OF FORM SUBMISSION*/
+.form{
+  position: relative;
+  background-color: white;
+  border: 1px solid #ccc;
+  width:76%;
+  height: 800px;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  padding: 2%;
+  overflow-y: auto;
+  background-color: #D0C8B6;
+  text-align: left;
+  z-index: 2;
+  box-shadow: 0px 0px 20px white;
+  color:black;
+  /*
+  background-image: url("card_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;*/
+}
+
+.formHeader{
+  position: relative;
+  width: 100%;
+  color: black;
+  font-size: 60px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  text-align: center;
+  font-family: headerFont;
+}
+
+.formMain1{
+  width: 100%;
+  height: 80%;
+  font-size: 25px;
+}
+
+.attendance{
+  position: relative;
+  align-content: center;
+  text-align: center; 
+  font-weight: bold;
+  /*text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;*/
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formComing{
+  position: relative;
+  display: none;
+}
+
+.attendees{
+  
+}
+
+.formNotComing{
+  position: relative;
+  display: none;
+}
+
+#attendee1{
+  position: relative;
+  margin-top: 5%;
+  font-weight: bold;
+}
+
+.firstName{
+  position: relative;
+  font-size: 5px;
+  line-height: 100px;
+}
+
+.RelationshipWithGroomAndBride{
+  position: relative;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+
+.Relationship{
+  position: relative;
+  width: 50%;
+}
+
+.vegetarian{
+  position: relative;
+  padding-top:4%;
+  font-weight: normal;
+}
+
+.hidingSubmit{
+  display: none !important;
+}
+
+input[type=text] {
+  width: 100%;
+  height: 50px;
+  margin-top: 5%;
+  /*padding: 12px 20px;
+  margin: 8px 0;*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.button {
+  display: flex;
+  margin-top: 5%;
+  height: 5%;
+  padding: 0;
+  background: #E3DAD5;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button:hover .button__text{
+  transition: 0.2s;
+  background-color: #DD9DA8;
+  color: black;
+  font-size: 25px;
+}
+
+.button:active .button__text,
+.button:hover .button__icon{
+  transition: 0.2s;
+  background-color: #D396A1;
+  color: black;
+}
+
+.button__text,
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #000;
+  height: 100%;
+}
+
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #000;
+  height: 100%;
+}
+
+.plusImage{
+  position: relative;
+  width: 8px;
+  height: 8px;
+}
+
+.comments{
+  position: relative;
+  margin-top: 5%;
+  width: 100%;
+  height:10%; 
+}
+
+.submit {
+  display: none;
+  width: 100%;
+  height: 10%;
+  background-color: #3AAFA9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.submit:hover {
+  background-color: #2F8F8A;
+  font-family: Arial;
+}
