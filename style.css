@@ -187,7 +187,7 @@ body {
 	transform: translate(0,-50%);
 	--small_font:15px;
 	--middle_font:20px;
-	--big_font:100px;
+	--big_font:50px;
 	--small_padding:5%;
 	--middle_padding:8%;
 	--big_padding:10%;
