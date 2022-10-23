@@ -187,7 +187,7 @@ body {
 	transform: translate(0,-50%);
 	--small_font:15px;
 	--middle_font:20px;
-	--big_font:50px;
+	--big_font:100px;
 	--small_padding:5%;
 	--middle_padding:8%;
 	--big_padding:10%;
@@ -211,7 +211,7 @@ body {
 .card_front_sub_content_3{
 	padding-top: var(--small_padding);
 	position: relative;
-	font-size: calc(var(--big_font)*2);
+	font-size: calc(var(--big_font)*1);
   font-family: weddingFont;
 }
 
