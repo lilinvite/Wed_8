@@ -36,7 +36,7 @@ window.onload = function() {
 	document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_padding', (document.body.clientWidth)*0.092 +"px"); //10%
 	if (document.getElementById('card_front_sub_content_bound').clientHeight >= document.getElementById('card_front_sub_content').clientHeight*0.75){
 	//if (parseFloat(getComputedStyle(document.querySelector(".card_front_sub_content_2")).fontSize.split("px")[0]) >= 18.515){
-		//console.log("heigh_domiannt")
+		console.log("heigh_domiannt")
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_font', (document.body.clientHeight)*0.020 +"px"); //15px
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', (document.body.clientHeight)*0.027 +"px"); //20px
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_font', (document.body.clientHeight)*0.067 +"px"); //50px
@@ -45,7 +45,7 @@ window.onload = function() {
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_padding', (document.body.clientHeight)*0.053 +"px"); //10% or 39.6px
 	}
 	else{
-		//console.log("weight_domiannt")
+		console.log("weight_domiannt")
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_font', (document.body.clientWidth)*0.035 +"px"); //15px
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', (document.body.clientWidth)*0.046 +"px"); //20px
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_font', (document.body.clientWidth)*0.116 +"px"); //50px
