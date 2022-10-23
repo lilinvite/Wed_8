@@ -35,14 +35,17 @@ window.onload = function() {
 	document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_padding', (document.body.clientWidth)*0.074 +"px"); //8%
 	document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_padding', (document.body.clientWidth)*0.092 +"px"); //10%
 	if (document.getElementById('card_front_sub_content_bound').clientHeight >= document.getElementById('card_front_sub_content').clientHeight*0.75){
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_font', "18.515px");
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', "24.334px");
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_font', "61.364px");
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_padding', "21.156px"); //5%
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_padding', "33.85px"); //8%
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_padding', "42.312px"); //10%
+	//if (parseFloat(getComputedStyle(document.querySelector(".card_front_sub_content_2")).fontSize.split("px")[0]) >= 18.515){
+		//console.log("heigh_domiannt")
+		document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_font', (document.body.clientHeight)*0.020 +"px"); //15px
+		document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', (document.body.clientHeight)*0.027 +"px"); //20px
+		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_font', (document.body.clientHeight)*0.067 +"px"); //50px
+		document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_padding', (document.body.clientHeight)*0.026 +"px"); //5% or 19.8px
+		document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_padding', (document.body.clientHeight)*0.042 +"px"); //8% or 31.68px
+		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_padding', (document.body.clientHeight)*0.053 +"px"); //10% or 39.6px
 	}
 	else{
+		//console.log("weight_domiannt")
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_font', (document.body.clientWidth)*0.035 +"px"); //15px
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', (document.body.clientWidth)*0.046 +"px"); //20px
 		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_font', (document.body.clientWidth)*0.116 +"px"); //50px
