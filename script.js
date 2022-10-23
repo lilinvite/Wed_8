@@ -65,7 +65,7 @@ window.onload = function() {
 
 	document.querySelector(".alert").style.setProperty('--font-size', (document.body.clientWidth)*0.05 +"px");
 
-
+	/*
 	window.addEventListener("resize", function(){
 		document.querySelector(".flip-card").style.setProperty('width', document.documentElement.clientWidth+"px");
 		document.querySelector(".flip-card").style.setProperty('height', document.documentElement.clientHeight+"px");
@@ -97,15 +97,15 @@ window.onload = function() {
 			document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_padding', (document.body.clientWidth)*0.092 +"px"); //10%
 		}
 
-		/*
+		
 		//for debug
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_font', (document.body.clientWidth)*0.035 +"px"); //15px
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', (document.body.clientWidth)*0.046 +"px"); //20px
-		document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_font', (document.body.clientWidth)*0.116 +"px"); //50px
-		if (document.getElementById('card_front_sub_content_bound').clientHeight >= document.getElementById('card_front_sub_content').clientHeight*0.75){
-			console.log(getComputedStyle(document.querySelector(".card_front_sub_content_5")).paddingTop);
-		}
-		*/
+		//document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_font', (document.body.clientWidth)*0.035 +"px"); //15px
+		//document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', (document.body.clientWidth)*0.046 +"px"); //20px
+		//document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_font', (document.body.clientWidth)*0.116 +"px"); //50px
+		//if (document.getElementById('card_front_sub_content_bound').clientHeight >= document.getElementById('card_front_sub_content').clientHeight*0.75){
+		//	console.log(getComputedStyle(document.querySelector(".card_front_sub_content_5")).paddingTop);
+		//}
+		
 
 		document.querySelector(".form").style.setProperty('width', (document.body.clientWidth)*0.71 +"px");
 		document.querySelector(".form").style.setProperty('height', (document.body.clientWidth)*1.3 +"px");
@@ -121,6 +121,7 @@ window.onload = function() {
 
 		document.querySelector(".alert").style.setProperty('--font-size', (document.body.clientWidth)*0.05 +"px");
 	})
+	*/
 }
 
 
