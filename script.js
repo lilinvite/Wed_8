@@ -29,7 +29,7 @@ window.onload = function() {
 	document.querySelector(".flip-card").style.setProperty('height', document.documentElement.clientHeight+"px");
 
 	document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_font', (document.body.clientWidth)*0.035 +"px"); //15px
-	document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', (document.body.clientWidth)*0.046 +"px"); //20px
+	document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_font', (document.body.clientWidth)*0.46 +"px"); //20px
 	document.querySelector(".card_front_sub_content_bound").style.setProperty('--big_font', (document.body.clientWidth)*0.116 +"px"); //50px
 	document.querySelector(".card_front_sub_content_bound").style.setProperty('--small_padding', (document.body.clientWidth)*0.046 +"px"); //5%
 	document.querySelector(".card_front_sub_content_bound").style.setProperty('--middle_padding', (document.body.clientWidth)*0.074 +"px"); //8%
